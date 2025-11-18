@@ -104,8 +104,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-",
-          title: '',
+            },},{id: "news-a-paper-accepted-by-the-visual-computer-international-journal-of-computer-graphics-2025",
+          title: 'A paper accepted by The Visual Computer International Journal of Computer Graphics 2025...',
           description: "",
           section: "News",},{id: "news-sparkles-smile-after-a-long-time-of-struggling-i-finally-decided-to-create-my-personal-website",
           title: ':sparkles: :smile: After a long time of struggling, I finally decided to create...',
