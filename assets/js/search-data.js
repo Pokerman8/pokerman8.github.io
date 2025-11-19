@@ -104,7 +104,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-paper-accepted-by-the-visual-computer-international-journal-of-computer-graphics-2025",
+            },},{id: "news-new-project-skel-cf-a-coarse-to-fine-biomechanical-skeleton-and-surface-mesh-recovery-framework",
+          title: 'New project SKEL-CF: a coarse-to-fine biomechanical skeleton and surface mesh recovery framework.',
+          description: "",
+          section: "News",},{id: "news-a-paper-accepted-by-the-visual-computer-international-journal-of-computer-graphics-2025",
           title: 'A paper accepted by The Visual Computer International Journal of Computer Graphics 2025...',
           description: "",
           section: "News",},{id: "news-sparkles-smile-after-a-long-time-of-struggling-i-finally-decided-to-create-my-personal-website",
