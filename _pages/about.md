@@ -33,9 +33,6 @@ I am an energetic and adventurous M.S. student in Computer Science at ShanghaiTe
 
 At the same time, I maintain an open and positive attitude toward AI for medical applications, and I am eager to adapt human-centric vision techniques to clinical and health-related scenarios.
 
-I am now actively exploring PhD opportunities in the Middle East, Japan, Australia and Canada.
-
-Feel free to contact me at pokerman13jjp [at] gmail.com.
 
 <!-- <div style="margin-top: 1em; text-align: center;">
   <a href="https://github.com/Pokerman8" target="_blank" style="margin-right: 1.5em; text-decoration: none;" title="GitHub">
