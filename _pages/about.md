@@ -16,7 +16,7 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 rejected_papers:
   enabled: false # includes a list of rejected papers
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -37,11 +37,33 @@ I am now actively exploring PhD opportunities in the Middle East, Japan, Austral
 
 Feel free to contact me at pokerman13jjp [at] gmail.com.
 
-<div style="margin-top: 1em; text-align: center;">
+<!-- <div style="margin-top: 1em; text-align: center;">
   <a href="https://github.com/Pokerman8" target="_blank" style="margin-right: 1.5em; text-decoration: none;" title="GitHub">
     <img src="{{ '/assets/img/GitHub.svg' | relative_url }}" alt="GitHub" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
   </a>
   <a href="/assets/pdf/cv.pdf" target="_blank" style="text-decoration: none;" title="CV">
     <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
   </a>
+</div> -->
+<div style="margin-top: 1em; text-align: center;">
+  <a href="mailto:pokerman13jjp@gmail.com" target="_blank" style="margin-right: 1.5em; text-decoration: none; color: inherit;" title="Gmail">
+    <i class="fa-solid fa-envelope" style="font-size: 2.5em; vertical-align: middle;"></i>
+  </a>
+  <a href="https://scholar.google.com/citations?user=bwKzizwAAAAJ" target="_blank" style="margin-right: 1.5em; text-decoration: none; color: inherit;" title="Google Scholar">
+    <i class="ai ai-google-scholar" style="font-size: 2.5em; vertical-align: middle;"></i>
+  </a>
+  <a href="https://github.com/Pokerman8" target="_blank" style="margin-right: 1.5em; text-decoration: none;" title="GitHub">
+    <img src="{{ '/assets/img/GitHub.svg' | relative_url }}" alt="GitHub" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
+  </a>
+  <a href="/assets/pdf/cv.pdf" target="_blank" style="text-decoration: none;" title="CV">
+    <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
+  </a>
+</div>
+
+<div style="margin-top: 1.5em; text-align: center;">
+  <script
+    type="text/javascript"
+    id="mmvst_globe"
+    src="//mapmyvisitors.com/globe.js?d=iaLNiK8FNGKhqTLyjOQ2JsKJlhXB2hrS-eoxdW1EUb8">
+  </script>
 </div>
