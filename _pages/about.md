@@ -59,11 +59,3 @@ Feel free to contact me at pokerman13jjp [at] gmail.com.
     <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
   </a>
 </div>
-
-<div style="margin-top: 1.5em; text-align: center;">
-  <script
-    type="text/javascript"
-    id="mmvst_globe"
-    src="//mapmyvisitors.com/globe.js?d=iaLNiK8FNGKhqTLyjOQ2JsKJlhXB2hrS-eoxdW1EUb8">
-  </script>
-</div>
