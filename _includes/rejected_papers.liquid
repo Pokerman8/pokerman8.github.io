@@ -1,0 +1,14 @@
+<div class="rejected-papers">
+  {% if site.data.rejected_papers %}
+    <ol reversed class="rejected-papers-list">
+      {% for paper in site.data.rejected_papers %}
+        <li>
+          <strong>"{{ paper.title }}"</strong>, rejected by {{ paper.rejected_by }}, {{ paper.rejected_year }}. {{ paper.later_status }}.
+        </li>
+      {% endfor %}
+    </ol>
+    <p class="rejected-papers-quote">In memory of those setbacks—success is merely a part of failure.</p>
+  {% else %}
+    <p>No rejected papers to display.</p>
+  {% endif %}
+</div>
