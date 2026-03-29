@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-a-weekly-fitness-check-in",
+        },{id: "post-wearable-medical-devices-and-personal-health-data",
+        
+          title: "Wearable Medical Devices and Personal Health Data",
+        
+        description: "Why continuous personal health data may become a foundation for truly personalized medicine.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/brainstorm-log/";
+          
+        },
+      },{id: "post-a-weekly-fitness-check-in",
         
           title: "A Weekly Fitness Check-In",
         
@@ -43,17 +54,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/building-better-game-guides/";
-          
-        },
-      },{id: "post-why-i-keep-a-brainstorm-log",
-        
-          title: "Why I Keep a Brainstorm Log",
-        
-        description: "a place for early ideas, rough hypotheses, and unfinished questions",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/brainstorm-log/";
           
         },
       },{id: "post-how-i-use-this-technical-notebook",
