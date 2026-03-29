@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
-nav: false
-nav_order: 1
+title: Blog
+nav: true
+nav_order: 3
 pagination:
   enabled: true
   collection: posts
@@ -27,34 +27,66 @@ pagination:
     <h1>{{ site.blog_name }}</h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
-  {% endif %}
+{% endif %}
 
-{% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
-
-  <div class="tag-category-list">
-    <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
-        <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
-        <p>&bull;</p>
-      {% endif %}
-      {% for category in site.display_categories %}
-        <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-    </ul>
+<div class="container featured-posts pt-4">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <a href="{{ '/blog/category/technical/' | relative_url }}">
+        <div class="card hoverable h-100">
+          <div class="card-body">
+            <p class="post-meta">
+              <i class="fa-solid fa-tag fa-sm"></i> Category
+            </p>
+            <h3 class="card-title">Technical</h3>
+            <p class="card-text" style="white-space: normal;">Coding, systems, and research tooling.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col mb-4">
+      <a href="{{ '/blog/category/brainstorm/' | relative_url }}">
+        <div class="card hoverable h-100">
+          <div class="card-body">
+            <p class="post-meta">
+              <i class="fa-solid fa-tag fa-sm"></i> Category
+            </p>
+            <h3 class="card-title">Brainstorm</h3>
+            <p class="card-text" style="white-space: normal;">Ideas, notes, and experiments in progress.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col mb-4">
+      <a href="{{ '/blog/category/game-guides/' | relative_url }}">
+        <div class="card hoverable h-100">
+          <div class="card-body">
+            <p class="post-meta">
+              <i class="fa-solid fa-tag fa-sm"></i> Category
+            </p>
+            <h3 class="card-title">Game Guides</h3>
+            <p class="card-text" style="white-space: normal;">Walkthroughs, strategies, and gameplay tips.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col mb-4">
+      <a href="{{ '/blog/category/fitness/' | relative_url }}">
+        <div class="card hoverable h-100">
+          <div class="card-body">
+            <p class="post-meta">
+              <i class="fa-solid fa-tag fa-sm"></i> Category
+            </p>
+            <h3 class="card-title">Fitness</h3>
+            <p class="card-text" style="white-space: normal;">Training logs, routines, and health notes.</p>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
-  {% endif %}
+</div>
+
+<hr>
 
 {% assign featured_posts = site.posts | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
