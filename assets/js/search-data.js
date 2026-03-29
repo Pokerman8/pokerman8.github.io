@@ -16,7 +16,58 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-a-post-with-videos",
+        },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "post-a-weekly-fitness-check-in",
+        
+          title: "A Weekly Fitness Check-In",
+        
+        description: "a simple place to track routines, consistency, and training reflections",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/weekly-fitness-check-in/";
+          
+        },
+      },{id: "post-building-better-game-guides",
+        
+          title: "Building Better Game Guides",
+        
+        description: "notes on writing clear walkthroughs, strategies, and gameplay tips",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/building-better-game-guides/";
+          
+        },
+      },{id: "post-why-i-keep-a-brainstorm-log",
+        
+          title: "Why I Keep a Brainstorm Log",
+        
+        description: "a place for early ideas, rough hypotheses, and unfinished questions",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/brainstorm-log/";
+          
+        },
+      },{id: "post-how-i-use-this-technical-notebook",
+        
+          title: "How I Use This Technical Notebook",
+        
+        description: "a short note on the kind of technical writing I want to keep here",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/technical-notebook/";
+          
+        },
+      },{id: "post-a-post-with-videos",
         
           title: "a post with videos",
         
