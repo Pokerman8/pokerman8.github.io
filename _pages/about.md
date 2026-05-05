@@ -42,17 +42,3 @@ At the same time, I maintain an open and positive attitude toward AI for medical
     <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
   </a>
 </div> -->
-<div style="margin-top: 1em; text-align: center;">
-  <a href="mailto:pokerman13jjp@gmail.com" target="_blank" style="margin-right: 1.5em; text-decoration: none; color: inherit;" title="Gmail">
-    <i class="fa-solid fa-envelope" style="font-size: 2.5em; vertical-align: middle;"></i>
-  </a>
-  <a href="https://scholar.google.com/citations?user=bwKzizwAAAAJ" target="_blank" style="margin-right: 1.5em; text-decoration: none; color: inherit;" title="Google Scholar">
-    <i class="ai ai-google-scholar" style="font-size: 2.5em; vertical-align: middle;"></i>
-  </a>
-  <a href="https://github.com/Pokerman8" target="_blank" style="margin-right: 1.5em; text-decoration: none;" title="GitHub">
-    <img src="{{ '/assets/img/GitHub.svg' | relative_url }}" alt="GitHub" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
-  </a>
-  <a href="/assets/pdf/cv.pdf" target="_blank" style="text-decoration: none;" title="CV">
-    <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
-  </a>
-</div>
