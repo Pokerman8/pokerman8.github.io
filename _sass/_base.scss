@@ -2,6 +2,29 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// Self-hosted fonts
+@font-face {
+  font-family: 'Alex Brush';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/alex-brush-400.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/tangerine-400.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/tangerine-700.woff2') format('woff2');
+  font-display: swap;
+}
+
 // Academic typography
 body {
   font-family: $body-font;
