@@ -8,20 +8,17 @@
   {% endif %}
 {% endcapture %}
 
-{% if site.footer_fixed %}
-  <footer class="fixed-bottom" role="contentinfo">
-    <div class="container mt-0">
-      {{ footer_contents }}
-    </div>
-  </footer>
-{% else %}
-  <footer class="sticky-bottom mt-5" role="contentinfo">
-    {% if site.newsletter.enabled %}
-      {% include newsletter.liquid %}
-    {% endif %}
-
-    <div class="container">
-      {{ footer_contents }}
-    </div>
-  </footer>
+{% if site.newsletter.enabled %}
+  {% include newsletter.liquid %}
 {% endif %}
+
+<div class="footer-divider"></div>
+
+<div class="footer-quote">
+  &ldquo;There is only one success &mdash; to be able to spend your life in your own way.&rdquo;
+  <span class="quote-author">&mdash; Christopher Morley</span>
+</div>
+
+<div class="site-footer">
+  {{ footer_contents }}
+</div>

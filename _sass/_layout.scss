@@ -17,11 +17,6 @@ body {
   }
 }
 
-body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
-}
-
 body.sticky-bottom-footer {
   // Remove padding below footer.
   padding-bottom: 0;
@@ -29,6 +24,15 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: $max-content-width;
+}
+
+main.container {
+  background-color: #D8E6F2;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  padding: 2rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem;
 }
 
 // Profile

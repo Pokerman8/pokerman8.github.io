@@ -29,7 +29,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an energetic and adventurous M.S. student in Computer Science at ShanghaiTech University, currently focusing on 3D human mesh recovery. I am very fortunate to be advised by [Dr. Rui Fan](https://sist.shanghaitech.edu.cn/fanrui_en/main.htm) at ShanghaiTech, and I am also a research intern at [IntelInDust](https://intellindust-ai-lab.github.io/), where I work with [Dr. Xi Shen](https://xishen0220.github.io/) on advanced on cutting-edge projects in human-centric vision.
+I am an incoming Ph.D. student at the University of Auckland, where I will be advised by [Prof. Zhang](https://profiles.auckland.ac.nz/yanxin-zhang). I am currently completing my M.S. in Computer Science at ShanghaiTech University, focusing on 3D human mesh recovery. I am very fortunate to be advised by [Prof. Fan](https://sist.shanghaitech.edu.cn/fanrui_en/main.htm) at ShanghaiTech, and I am also a research intern at [IntelInDust](https://intellindust-ai-lab.github.io/), where I work with [Dr. Xi Shen](https://xishen0220.github.io/) on cutting-edge projects in human-centric vision.
 
 At the same time, I maintain an open and positive attitude toward AI for medical applications, and I am eager to adapt human-centric vision techniques to clinical and health-related scenarios.
 

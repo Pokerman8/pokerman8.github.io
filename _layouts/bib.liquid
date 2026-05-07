@@ -234,7 +234,9 @@
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
       {% endif %}
       {% if entry.code %}
-        <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        {% unless entry.code contains 'github.com' %}
+          <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+        {% endunless %}
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
@@ -251,7 +253,13 @@
         {% endif %}
       {% endif %}
       {% if entry.website %}
-        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+        <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Project page</a>
+      {% endif %}
+      {% if entry.code and entry.code contains 'github.com' %}
+        {% assign github_repo = entry.code | replace: 'https://github.com/', '' | replace: 'http://github.com/', '' %}
+        <a href="{{ entry.code }}" class="github-stars-link">
+          <img src="https://img.shields.io/github/stars/{{ github_repo }}?style=social" alt="GitHub stars" class="github-stars-badge">
+        </a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
