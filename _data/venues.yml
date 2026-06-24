@@ -7,3 +7,7 @@
 
 "Vision":
   color: "#009f36"
+
+"ECCV":
+  url: https://eccv.ecva.net/
+  color: "#0076a8"

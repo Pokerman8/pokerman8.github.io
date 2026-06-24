@@ -1411,6 +1411,19 @@ figure.cover {
   margin-bottom: 2rem;
 }
 
+.news {
+  .news-scrollable {
+    max-height: 24rem;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+  }
+
+  .news-date {
+    width: 7rem;
+    white-space: nowrap;
+  }
+}
+
 .news-section,
 .blog-section,
 .publications-section,
