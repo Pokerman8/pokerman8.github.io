@@ -2,17 +2,35 @@
  * Content
  ******************************************************************************/
 
+html {
+  background-color: var(--global-bg-color);
+  overscroll-behavior: none;
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
-  background-image:
-    linear-gradient(rgba(197, 207, 218, 0.18), rgba(197, 207, 218, 0.18)),
-    url('/assets/img/background.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: transparent;
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overscroll-behavior: none;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    transform: translateZ(0);
+    will-change: transform;
+    background-image:
+      linear-gradient(rgba(197, 207, 218, 0.18), rgba(197, 207, 218, 0.18)),
+      url('/assets/img/background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   h1,
   h2,
@@ -42,12 +60,6 @@ main.container {
   margin-bottom: 1rem;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
 }
 
 // Profile
