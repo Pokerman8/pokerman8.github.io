@@ -105,8 +105,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-paper-accepted-by-the-visual-computer-international-journal-of-computer-graphics-2025",
-          title: 'A paper accepted by The Visual Computer International Journal of Computer Graphics 2025...',
+            },},{id: "news-our-paper-was-accepted-by-visual-computer",
+          title: 'Our paper was accepted by Visual Computer.',
           description: "",
           section: "News",},{id: "news-our-paper-skel-cf-has-been-accepted-to-eccv-2026",
           title: 'Our paper SKEL-CF has been accepted to ECCV 2026.',
