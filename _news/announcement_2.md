@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A paper accepted by The Visual Computer International Journal of Computer Graphics 2025
+Our paper was accepted by Visual Computer.
