@@ -306,7 +306,14 @@ ul.task-list input[type="checkbox"] {
     .contact-icons-header {
       margin-top: 0.75rem;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+
+      .contact-icons-row {
+        display: flex;
+        align-items: center;
+      }
 
       a {
         margin-right: 1.25rem;
@@ -336,6 +343,10 @@ ul.task-list input[type="checkbox"] {
           img {
             opacity: 1;
           }
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }

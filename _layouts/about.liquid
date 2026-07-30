@@ -21,21 +21,28 @@ layout: default
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
         <div class="contact-icons-header">
-          <a href="mailto:pokerman13jjp@gmail.com" title="Gmail">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-          <a href="https://scholar.google.com/citations?user=bwKzizwAAAAJ" title="Google Scholar">
-            <i class="ai ai-google-scholar"></i>
-          </a>
-          <a href="https://x.com/jhon0v0" title="X / Twitter">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a href="https://github.com/Pokerman8" title="GitHub">
-            <img src="{{ '/assets/img/GitHub.svg' | relative_url }}" alt="GitHub">
-          </a>
-          <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" title="CV">
-            <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV">
-          </a>
+          <div class="contact-icons-row">
+            <a href="mailto:pokerman13jjp@gmail.com" title="Gmail">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=bwKzizwAAAAJ" title="Google Scholar">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+            <a href="https://github.com/Pokerman8" title="GitHub">
+              <img src="{{ '/assets/img/GitHub.svg' | relative_url }}" alt="GitHub">
+            </a>
+            <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" title="CV">
+              <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV">
+            </a>
+          </div>
+          <div class="contact-icons-row">
+            <a href="https://x.com/jhon0v0" title="X / Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/johnny_ovo_/" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
         </div>
       </div>
       {% if page.profile.image %}
