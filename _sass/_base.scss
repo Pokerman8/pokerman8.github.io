@@ -2,26 +2,36 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
-// Self-hosted fonts
+@use "sass:color";
+
+// Self-hosted fonts (Google Fonts is unreachable from mainland China).
+// Newsreader, variable in weight (200–800) and optical size (6–72).
+$newsreader-latin-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-201F, U+2022-206F,
+  U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
 @font-face {
-  font-family: 'Alex Brush';
+  font-family: "Newsreader";
   font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/alex-brush-400.woff2') format('woff2');
+  font-weight: 200 800;
+  src: url("../fonts/newsreader-latin-var.woff2") format("woff2");
+  unicode-range: $newsreader-latin-range;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Tangerine';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/tangerine-400.woff2') format('woff2');
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  src: url("../fonts/newsreader-latin-var-italic.woff2") format("woff2");
+  unicode-range: $newsreader-latin-range;
   font-display: swap;
 }
+// † and ‡ for author notes
 @font-face {
-  font-family: 'Tangerine';
+  font-family: "Newsreader";
   font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/tangerine-700.woff2') format('woff2');
+  font-weight: 200 800;
+  src: url("../fonts/newsreader-daggers-var.woff2") format("woff2");
+  unicode-range: U+2020-2021;
   font-display: swap;
 }
 
@@ -29,7 +39,9 @@
 body {
   font-family: $body-font;
   line-height: $content-line-height;
-  font-size: 1rem;
+  font-size: 1.1875rem;
+  font-weight: 400;
+  font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,6 +56,21 @@ h6 {
   font-weight: 600;
   color: var(--global-text-color);
   letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--plate-color);
+  color: $white-color;
+}
+
+:focus-visible {
+  outline: 2px solid var(--plate-color);
+  outline-offset: 2px;
+}
+
+.plate :focus-visible,
+.minimal-header :focus-visible {
+  outline-color: var(--brass-color);
 }
 
 h1 {
@@ -257,98 +284,200 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
-// Profile header (photo + name side by side)
+// Homepage plate: name, position and links beside a runner drawn after
+// Marey's geometric chronophotographs (_includes/plate.liquid).
 
-.profile-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+$plate-ground: 2.75rem; // distance of the ground line from the bottom of the plate
 
-  .profile-photo {
-    flex-shrink: 0;
+.plate {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--plate-color);
+  color: $white-color;
 
-    img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border: 2px solid var(--global-divider-color);
-      border-radius: 4px;
+  // Elements are colored individually above; inside the plate they inherit.
+  * {
+    color: inherit;
+  }
+
+  // The ground the runner lands on. Plate colors are solid mixes rather than
+  // translucent white: the production CSS minifier turns rgba(255, 255, 255, a)
+  // into an invalid hsla().
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: $plate-ground;
+    left: 0;
+    height: 1px;
+    background-color: color.mix($white-color, $plate-color, 16%);
+  }
+
+  .plate-body {
+    position: relative;
+    z-index: 1;
+    min-height: 31rem;
+    padding: 5.5rem 2rem $plate-ground + 4rem;
+  }
+
+  .plate-identity {
+    max-width: 30rem;
+  }
+
+  .plate-name {
+    margin: 0 0 1.25rem;
+    font-size: clamp(2.75rem, 5.2vw, 4.5rem);
+    font-weight: 650;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: $white-color;
+  }
+
+  .plate-role,
+  .plate-field {
+    text-wrap: balance;
+  }
+
+  .plate-role {
+    margin: 0;
+    font-size: 1.3125rem;
+    line-height: 1.35;
+    color: color.mix($white-color, $plate-color, 94%);
+  }
+
+  .plate-field {
+    margin: 0.2rem 0 0;
+    font-size: 1.1875rem;
+    font-style: italic;
+    line-height: 1.35;
+    color: color.mix($white-color, $plate-color, 62%);
+  }
+
+  .plate-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.0625rem;
+
+    a {
+      color: $white-color;
+      text-decoration: underline;
+      text-decoration-color: color.mix($white-color, $plate-color, 30%);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.3em;
+      transition: text-decoration-color 0.2s ease;
+
+      &:hover {
+        color: $white-color;
+        text-decoration-color: var(--brass-color);
+      }
+    }
+
+    i {
+      margin-right: 0.5em;
+      color: var(--brass-color);
+    }
+  }
+}
+
+// The runner stands on the ground line, its latest exposure at the right edge of the content.
+.plate-chrono {
+  position: absolute;
+  right: 2rem;
+  bottom: $plate-ground;
+  height: 60%;
+  margin: 0;
+
+  .chrono {
+    display: block;
+    width: auto;
+    height: 100%;
+    overflow: visible;
+  }
+
+  path {
+    fill: none;
+    stroke: $white-color;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .chrono-trail path {
+    stroke-width: 1.1px;
+  }
+
+  .chrono-latest {
+    stroke-width: 1.6px;
+    stroke-opacity: 0.92;
+  }
+
+  .chrono-keypoints {
+    stroke: var(--brass-color);
+    stroke-width: 5.5px;
+  }
+}
+
+// A single sweep on load, like the plate being exposed from left to right.
+@media (prefers-reduced-motion: no-preference) {
+  .plate-chrono .chrono {
+    animation: chrono-expose 1.6s cubic-bezier(0.3, 0.6, 0.2, 1) 0.2s both;
+  }
+}
+
+@keyframes chrono-expose {
+  from {
+    clip-path: inset(-10% 100% -10% 0);
+  }
+  to {
+    clip-path: inset(-10% -10% -10% 0);
+  }
+}
+
+@media (max-width: 991px) {
+  .plate .plate-body {
+    min-height: 27rem;
+  }
+
+  .plate-chrono {
+    height: 62%;
+  }
+}
+
+@media (max-width: 767px) {
+  .plate {
+    .plate-body {
+      min-height: 0;
+      padding: 2.75rem 1.25rem 0;
+    }
+
+    .plate-name {
+      margin-bottom: 0.9rem;
+      font-size: 2.75rem;
+    }
+
+    .plate-role {
+      font-size: 1.1875rem;
+    }
+
+    .plate-field {
+      font-size: 1.0625rem;
     }
   }
 
-  .profile-identity {
-    .name-heading {
-      font-family: $heading-font;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      color: var(--global-text-color);
-    }
+  .plate-chrono {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    height: auto;
+    margin: 2rem 0 $plate-ground;
 
-    .subtitle {
-      color: var(--global-text-color-light);
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .more-info {
-      font-family: $body-font;
-      font-size: 0.9rem;
-      color: var(--global-text-color-light);
-
-      p {
-        display: inline;
-        margin: 0;
-      }
-    }
-
-    .contact-icons-header {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-
-      .contact-icons-row {
-        display: flex;
-        align-items: center;
-      }
-
-      a {
-        margin-right: 1.25rem;
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        align-items: center;
-
-        i {
-          font-size: 1.25rem;
-          color: var(--global-text-color);
-          transition: color 0.2s ease;
-        }
-
-        img {
-          width: 1.25rem;
-          height: 1.25rem;
-          opacity: 0.8;
-          transition: opacity 0.2s ease;
-        }
-
-        &:hover {
-          i {
-            color: var(--global-theme-color);
-          }
-
-          img {
-            opacity: 1;
-          }
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+    .chrono {
+      width: 100%;
+      height: auto;
     }
   }
 }
@@ -382,21 +511,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-@media (max-width: 576px) {
-  .profile-header {
-    gap: 1rem;
-
-    .profile-photo img {
-      width: 100px;
-      height: 100px;
-    }
-
-    .profile-identity .name-heading {
-      font-size: 1.5rem;
-    }
-  }
-}
-
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
@@ -411,28 +525,40 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-// Minimal header
+// Minimal header (every page except the homepage, which has the plate)
 
 .minimal-header {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  background-color: var(--global-bg-color);
+  background-color: var(--plate-color);
+  padding: 0.85rem 0;
+
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
   .site-name {
     font-family: $heading-font;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--global-text-color);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: $white-color;
     text-decoration: none;
-    letter-spacing: 0.02em;
 
     &:hover {
-      color: var(--global-theme-color);
+      color: $white-color;
+      text-decoration: underline;
+      text-decoration-color: var(--brass-color);
+      text-underline-offset: 0.3em;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
     }
   }
 }
-
 
 // Social (bottom)
 
@@ -511,35 +637,41 @@ ul.task-list input[type="checkbox"] {
 }
 
 // Footer
-.footer-divider {
-  margin-top: 2.5rem;
+
+.site-foot {
+  margin-top: 4.5rem;
+  padding-top: 1.75rem;
   border-top: 1px solid var(--global-divider-color);
 }
 
 .footer-quote {
-  text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 0.25rem;
-  font-family: 'Alex Brush', 'Tangerine', cursive;
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: var(--global-text-color);
-  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 1.1875rem;
 
-  .quote-author {
+  p {
+    margin: 0;
+    font-style: italic;
+  }
+
+  cite {
     display: block;
-    margin-top: 0.25rem;
+    margin-top: 0.35rem;
     font-size: 1rem;
-    font-family: 'Tangerine', cursive;
-    font-weight: 400;
+    font-style: normal;
+    color: var(--global-text-color-light);
+
+    &::before {
+      content: "\2014\00a0";
+    }
   }
 }
 
 .site-footer {
-  margin-top: 0.75rem;
-  padding-top: 0.5rem;
-  text-align: center;
-  font-size: 0.85rem;
+  margin: 1.25rem 0 0;
+  font-size: 0.9375rem;
   color: var(--global-text-color-light);
 }
 
@@ -758,12 +890,20 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  // Year headings on the publications page
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: var(--global-text-color-light);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
-    margin-top: 2rem;
-    text-align: right;
+    margin-top: 2.5rem;
+    font-size: 1.3125rem;
+    font-variant-numeric: lining-nums;
+  }
+
+  .pub-legend {
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+    color: var(--global-text-color-light);
   }
 
   ol.bibliography {
@@ -772,27 +912,71 @@ ul.task-list input[type="checkbox"] {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 2.25rem;
 
-      .preview {
+      // Thumbnail column and text column; replaces the Bootstrap grid from bib.liquid.
+      > .row {
+        display: grid;
+        grid-template-columns: 12rem minmax(0, 1fr);
+        column-gap: 1.5rem;
+        margin: 0;
+
+        > [class*="col"] {
+          flex: none;
+          width: auto;
+          max-width: none;
+          padding: 0;
+        }
+
+        > :only-child {
+          grid-column: 1 / -1;
+        }
       }
 
       .abbr {
-        margin-bottom: 0.5rem;
-
         abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          display: block;
+          margin: 0;
+          padding: 0.3rem 0.6rem;
+          border-radius: 0 !important;
+          background-color: var(--plate-color);
+          font-family: $body-font;
+          font-size: 0.8125rem;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+          line-height: 1.3;
+          text-align: left;
+          white-space: normal;
+          color: $white-color !important;
 
+          div,
           a {
-            color: white;
+            color: $white-color;
 
             &:hover {
-              text-decoration: none;
+              color: $white-color;
+              text-decoration: underline;
             }
           }
+        }
+
+        figure {
+          margin: 0;
+        }
+
+        .preview {
+          display: block;
+          width: 100%;
+          height: auto;
+          border: 1px solid var(--global-divider-color);
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          background-color: var(--global-card-bg-color);
+        }
+
+        abbr + figure .preview,
+        abbr + .preview {
+          border-top: 0;
         }
 
         .award {
@@ -802,16 +986,26 @@ ul.task-list input[type="checkbox"] {
       }
 
       .title {
-        font-weight: bolder;
+        margin-bottom: 0.3rem;
+        font-size: 1.1875rem;
+        font-weight: 600;
+        line-height: 1.35;
       }
 
       .author {
+        font-size: 1.0625rem;
+        line-height: 1.5;
+
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: inherit;
+          text-decoration: underline;
+          text-decoration-color: var(--global-divider-color);
+          text-decoration-thickness: 1px;
+          text-underline-offset: 0.2em;
 
           &:hover {
-            border-bottom-style: solid;
-            text-decoration: none;
+            color: var(--global-theme-color);
+            text-decoration-color: currentColor;
           }
         }
 
@@ -832,23 +1026,87 @@ ul.task-list input[type="checkbox"] {
         }
       }
 
-      .links {
-        a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+      .periodical {
+        font-size: 1.0625rem;
+        line-height: 1.5;
+        color: var(--global-text-color-light);
 
-          &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+        em {
+          color: inherit;
+        }
+      }
+
+      // Icon links: every kind of link has its own mark, no boxes
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1.4rem;
+        margin-top: 0.7rem;
+
+        .pub-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45em;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.45;
+          color: var(--global-text-color);
+          text-decoration: none;
+          cursor: pointer;
+
+          > i {
+            width: 1.15em;
+            font-size: 1.05em;
+            text-align: center;
+            color: var(--pub-mark, var(--plate-color));
+          }
+
+          &:hover,
+          &:focus-visible {
+            color: var(--global-text-color);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.25em;
           }
         }
-        a.award.btn {
-          border-color: var(--global-highlight-color);
+
+        .pub-link-pdf {
+          --pub-mark: #b3261e;
+        }
+        .pub-link-arxiv {
+          --pub-mark: #b31b1b;
+        }
+        .pub-link-website {
+          --pub-mark: #{$link-color};
+        }
+        .pub-link-poster,
+        .pub-link-slides,
+        .pub-link-award {
+          --pub-mark: #{$brass-color};
+        }
+        .pub-link-video {
+          --pub-mark: #e62117;
+        }
+        .pub-link-code {
+          --pub-mark: #{$ink-color};
+        }
+
+        .pub-stars {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25em;
+          margin-left: 0.2em;
+          font-variant-numeric: tabular-nums lining-nums;
+          color: var(--global-text-color-light);
+
+          &[hidden] {
+            display: none;
+          }
+
+          i {
+            font-size: 0.8em;
+            color: var(--brass-color);
+          }
         }
       }
 
@@ -868,7 +1126,7 @@ ul.task-list input[type="checkbox"] {
       }
 
       .hidden {
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
         max-height: 0px;
         overflow: hidden;
         text-align: justify;
@@ -879,7 +1137,7 @@ ul.task-list input[type="checkbox"] {
         transition: all 0.15s ease;
 
         p {
-          line-height: 1.4em;
+          line-height: 1.5em;
           margin: 10px;
         }
 
@@ -912,6 +1170,17 @@ ul.task-list input[type="checkbox"] {
     }
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
+    }
+  }
+
+  @media (max-width: 576px) {
+    ol.bibliography li > .row {
+      grid-template-columns: 1fr;
+      row-gap: 0.9rem;
+
+      .abbr {
+        max-width: 16rem;
+      }
     }
   }
 }
@@ -1184,7 +1453,6 @@ swiper-container {
   }
 }
 
-
 // newsletter
 .newsletter-form-container {
   margin-bottom: 20px;
@@ -1211,6 +1479,13 @@ swiper-container {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
   border-radius: 6px;
   padding: 8px 12px;
+}
+
+.bibsearch-form-input {
+  border-color: var(--global-text-color-light);
+  border-radius: 0;
+  box-shadow: none;
+  font-family: $body-font;
 }
 
 .newsletter-form-input:focus {
@@ -1417,38 +1692,22 @@ figure.cover {
   }
 }
 
-// About page section styling
-.bio-section {
-  margin-bottom: 2rem;
-}
+// Homepage sections: hanging labels on the left, content on the right, like a CV
 
-.news {
-  .news-scrollable {
-    max-height: 24rem;
-    overflow-y: auto;
-    padding-right: 0.25rem;
-  }
+.home-section {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  column-gap: 2.5rem;
+  margin-top: 3.25rem;
 
-  .news-date {
-    width: 7rem;
-    white-space: nowrap;
-  }
-}
-
-.news-section,
-.blog-section,
-.publications-section,
-.rejected-section,
-.social-section {
-  border-top: 1px solid var(--global-divider-color);
-  padding-top: 0.5rem;
-  margin-top: 2.5rem;
-
-  h2 {
-    font-family: $heading-font;
-    font-size: 1.5rem;
+  > h2 {
+    grid-column: 1;
+    margin: 0;
+    padding-top: 0.05rem;
+    font-size: 1.3125rem;
     font-weight: 600;
-    margin-bottom: 1.25rem;
+    line-height: 1.35;
+    white-space: nowrap;
 
     a {
       color: inherit;
@@ -1459,22 +1718,118 @@ figure.cover {
       }
     }
   }
+
+  > .section-aside {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  > .section-body {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+    margin-top: 2.75rem;
+
+    > h2 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.bio-section .section-body,
+.news-section .section-body {
+  a {
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-color: rgba($link-color, 0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+.bio-section {
+  margin-top: 3.5rem;
+
+  p {
+    max-width: 36em;
+    margin-bottom: 1rem;
+  }
+
+  .portrait {
+    max-width: 10rem;
+    padding-top: 0.4rem;
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 22%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 2.25rem;
+
+    .portrait {
+      width: 8rem;
+      margin-bottom: 1.5rem;
+      padding-top: 0;
+    }
+  }
+}
+
+.news {
+  .news-scrollable {
+    max-height: 24rem;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+  }
+
+  table {
+    margin: 0;
+  }
+
+  // Beats MDB's `.table.table-sm td` padding and light weight
+  .table.table-sm th,
+  .table.table-sm td {
+    padding: 0 0 0.65rem;
+    border: 0;
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    vertical-align: baseline;
+  }
+
+  .table.table-sm .news-date {
+    width: 6.5rem;
+    padding-right: 1.25rem;
+    font-variant-numeric: tabular-nums lining-nums;
+    white-space: nowrap;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Footer aligned with the section content on the homepage
+.site-foot.home-section {
+  margin-top: 4.5rem;
+  padding-top: 1.75rem;
 }
 
 // Hoverable card effect
 .hoverable:hover {
   border-color: var(--global-theme-color);
   transition: border-color 0.2s ease;
-}
-
-// GitHub stars badge in publication buttons
-.github-stars-link {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 0.25rem;
-}
-
-.github-stars-badge {
-  height: 20px;
-  display: block;
 }

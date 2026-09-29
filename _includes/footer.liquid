@@ -1,10 +1,7 @@
 {% capture footer_contents %}
-  &copy; Ji-Ping Jin | Last updated: May 2026 {{ site.footer_text }}
+  &copy; Ji-Ping Jin. Last updated {{ site.time | date: '%B %Y' }}. {{ site.footer_text }}
   {% if site.impressum_path %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-  {% endif %}
-  {% if site.last_updated %}
-    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
 {% endcapture %}
 
@@ -12,13 +9,12 @@
   {% include newsletter.liquid %}
 {% endif %}
 
-<div class="footer-divider"></div>
-
-<div class="footer-quote">
-  &ldquo;There is only one success &mdash; to be able to spend your life in your own way.&rdquo;
-  <span class="quote-author">&mdash; Christopher Morley</span>
-</div>
-
-<div class="site-footer">
-  {{ footer_contents }}
-</div>
+<footer class="site-foot{% if page.layout == 'about' %} home-section{% endif %}">
+  <div class="section-body">
+    <blockquote class="footer-quote">
+      <p>&ldquo;There is only one success &mdash; to be able to spend your life in your own way.&rdquo;</p>
+      <cite>Christopher Morley</cite>
+    </blockquote>
+    <p class="site-footer">{{ footer_contents | strip }}</p>
+  </div>
+</footer>

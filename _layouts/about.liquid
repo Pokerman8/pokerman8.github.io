@@ -1,96 +1,60 @@
 ---
 layout: default
 ---
+{% comment %}The name, position and contact links are in the plate above (_includes/plate.liquid).{% endcomment %}
 <div class="post">
-  <article>
-    <!-- Profile header: name left, photo right -->
-    <header class="profile-header">
-      <div class="profile-identity">
-        <h1 class="name-heading">
-          {% if site.title == 'blank' %}
-            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-            {{ site.last_name }}
-          {% else %}
-            {{ site.title }}
-          {% endif %}
-        </h1>
-        {% if page.subtitle %}
-          <p class="subtitle">{{ page.subtitle }}</p>
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-        <div class="contact-icons-header">
-          <div class="contact-icons-row">
-            <a href="mailto:pokerman13jjp@gmail.com" title="Gmail">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=bwKzizwAAAAJ" title="Google Scholar">
-              <i class="ai ai-google-scholar"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+  <article class="home">
+    <!-- Bio -->
+    <section id="bio" class="home-section bio-section">
       {% if page.profile.image %}
-        <div class="profile-photo">
+        <div class="section-aside portrait">
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) 140px, 30vw{% endcapture %}
           {%
             include figure.liquid loading="eager" path=profile_image_path
-            class="img-fluid" sizes=sizes alt=page.profile.image
+            sizes="(min-width: 768px) 160px, 128px" alt=page.profile.alt
             cache_bust=true
           %}
         </div>
       {% endif %}
-    </header>
-
-    <!-- Bio -->
-    <section id="bio" class="bio-section">
-      <div class="clearfix">{{ content }}</div>
+      <div class="section-body">{{ content }}</div>
     </section>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <section id="news" class="news-section">
-        <h2>
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-        </h2>
-        {% include news.liquid limit=true %}
+      <section id="news" class="home-section news-section">
+        <h2><a href="{{ '/news/' | relative_url }}">News</a></h2>
+        <div class="section-body">{% include news.liquid limit=true %}</div>
       </section>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <section id="blog" class="blog-section">
-        <h2>
-          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-        </h2>
-        {% include latest_posts.liquid %}
+      <section id="blog" class="home-section blog-section">
+        <h2><a href="{{ '/blog/' | relative_url }}">Latest posts</a></h2>
+        <div class="section-body">{% include latest_posts.liquid %}</div>
       </section>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <section id="publications" class="publications-section">
-        <h2>
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-        </h2>
-        {% include selected_papers.liquid %}
+      <section id="publications" class="home-section publications-section">
+        <h2><a href="{{ '/publications/' | relative_url }}">Selected publications</a></h2>
+        <div class="section-body">{% include selected_papers.liquid %}</div>
       </section>
     {% endif %}
 
     <!-- Rejected papers -->
     {% if page.rejected_papers and page.rejected_papers.enabled %}
-      <section id="rejected" class="rejected-section">
-        <h2>Rejected Papers</h2>
-        {% include rejected_papers.liquid %}
+      <section id="rejected" class="home-section rejected-section">
+        <h2>Rejected papers</h2>
+        <div class="section-body">{% include rejected_papers.liquid %}</div>
       </section>
     {% endif %}
 
     <!-- Social -->
     {% if page.social %}
-      <section id="contact" class="social-section">
-        <div class="social">
+      <section id="contact" class="home-section social-section">
+        <div class="section-body social">
           <div class="contact-icons">{% include social.liquid %}</div>
           <div class="contact-note">{{ site.contact_note }}</div>
         </div>
@@ -100,6 +64,5 @@ layout: default
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
-
   </article>
 </div>

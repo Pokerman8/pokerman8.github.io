@@ -10,27 +10,9 @@ html {
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
-  background-color: transparent;
+  background-color: var(--global-bg-color);
   min-height: 100vh;
-  position: relative;
-  isolation: isolate;
   overscroll-behavior: none;
-
-  &::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    transform: translateZ(0);
-    will-change: transform;
-    background-image:
-      linear-gradient(rgba(197, 207, 218, 0.18), rgba(197, 207, 218, 0.18)),
-      url('/assets/img/background.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 
   h1,
   h2,
@@ -52,14 +34,16 @@ body.sticky-bottom-footer {
 }
 
 main.container {
-  background-color: rgba(216, 230, 242, 0.9);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 4px;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
   margin-top: 1rem !important;
   margin-bottom: 1rem;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+
+  @media (max-width: 576px) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 // Profile

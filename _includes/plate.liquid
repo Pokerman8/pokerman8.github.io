@@ -1,0 +1,39 @@
+{% comment %}
+  Homepage header: a navy "plate" with name, position and contact links,
+  beside a runner drawn after Marey's geometric chronophotographs.
+  Text and links come from `plate:` in _pages/about.md; the portrait sits
+  next to the bio in _layouts/about.liquid.
+{% endcomment %}
+<header class="plate">
+  <div class="container plate-body">
+    <div class="plate-identity">
+      <h1 class="plate-name">
+        {%- if site.title == 'blank' -%}
+          {{ site.first_name }}
+          {% if site.middle_name %}{{ site.middle_name }} {% endif %}
+          {{- site.last_name -}}
+        {%- else -%}
+          {{ site.title }}
+        {%- endif -%}
+      </h1>
+      {% if page.plate.role %}
+        <p class="plate-role">{{ page.plate.role }}</p>
+      {% endif %}
+      {% if page.plate.field %}
+        <p class="plate-field">{{ page.plate.field }}</p>
+      {% endif %}
+      {% if page.plate.links %}
+        <ul class="plate-links">
+          {% for link in page.plate.links %}
+            <li>
+              <a href="{{ link.url }}"><i class="{{ link.icon }}" aria-hidden="true"></i>{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <figure class="plate-chrono">
+      {% include chronophotograph.liquid %}
+    </figure>
+  </div>
+</header>

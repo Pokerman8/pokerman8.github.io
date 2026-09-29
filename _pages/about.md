@@ -2,16 +2,29 @@
 layout: about
 title: About
 permalink: /
-# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+description: Ji-Ping Jin is a Ph.D. student at the University of Auckland, broadly interested in human-centric computer vision.
+
+# Name, position and links shown in the navy plate at the top of the homepage
+plate:
+  role: Ph.D. student, University of Auckland
+  field: Human-centric computer vision
+  links:
+    - title: Email
+      icon: fa-solid fa-envelope
+      url: mailto:pokerman13jjp@gmail.com
+    - title: Google Scholar
+      icon: ai ai-google-scholar
+      url: https://scholar.google.com/citations?user=bwKzizwAAAAJ
+    # - title: GitHub
+    #   icon: fa-brands fa-github
+    #   url: https://github.com/Pokerman8
+    # - title: CV
+    #   icon: fa-solid fa-file-lines
+    #   url: /assets/pdf/cv.pdf
 
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>555 your office number</p>
-  #   <p>123 your address street</p>
-  #   <p>Your City, State 12345</p>
+  alt: Portrait of Ji-Ping Jin
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 rejected_papers:
@@ -29,16 +42,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming Ph.D. student at the University of Auckland, where I will be advised by [Prof. Zhang](https://profiles.auckland.ac.nz/yanxin-zhang). I am currently completing my M.S. in Computer Science at ShanghaiTech University, focusing on 3D human mesh recovery. I am very fortunate to be advised by [Prof. Fan](https://sist.shanghaitech.edu.cn/fanrui_en/main.htm) at ShanghaiTech, and I am also a research intern at [IntelInDust](https://intellindust-ai-lab.github.io/), where I work with [Dr. Xi Shen](https://xishen0220.github.io/) on cutting-edge projects in human-centric vision.
+I am a Ph.D. student at the University of Auckland, advised by [Prof. Yanxin Zhang](https://profiles.auckland.ac.nz/yanxin-zhang). I am broadly interested in human-centric vision tasks and their applications in clinical and health-related settings.
 
-At the same time, I maintain an open and positive attitude toward AI for medical applications, and I am eager to adapt human-centric vision techniques to clinical and health-related scenarios.
-
-
-<!-- <div style="margin-top: 1em; text-align: center;">
-  <a href="https://github.com/Pokerman8" target="_blank" style="margin-right: 1.5em; text-decoration: none;" title="GitHub">
-    <img src="{{ '/assets/img/GitHub.svg' | relative_url }}" alt="GitHub" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
-  </a>
-  <a href="/assets/pdf/cv.pdf" target="_blank" style="text-decoration: none;" title="CV">
-    <img src="{{ '/assets/img/cv.svg' | relative_url }}" alt="CV" style="width: 2.5em; height: 2.5em; vertical-align: middle;">
-  </a>
-</div> -->
+Before Auckland, I was an M.S. student in Computer Science at ShanghaiTech University, advised by [Prof. Rui Fan](https://sist.shanghaitech.edu.cn/fanrui_en/main.htm), and a research intern at [Intellindust AI Lab](https://intellindust-ai-lab.github.io/), working with [Dr. Xi Shen](https://xishen0220.github.io/).

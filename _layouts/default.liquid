@@ -17,7 +17,11 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-
+    {% if page.layout == 'about' %}
+      {% include plate.liquid %}
+    {% else %}
+      {% include header.liquid %}
+    {% endif %}
 
     <!-- Content -->
     <main class="container mt-4" role="main">
