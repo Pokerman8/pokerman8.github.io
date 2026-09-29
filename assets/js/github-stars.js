@@ -1,0 +1,1 @@
+document.querySelectorAll("[data-github-stars]").forEach(t=>{fetch(`https://api.github.com/repos/${t.dataset.githubStars}`).then(t=>t.ok?t.json():null).then(e=>{e&&Number.isFinite(e.stargazers_count)&&(t.querySelector(".pub-stars-count").textContent=e.stargazers_count.toLocaleString("en"),t.hidden=!1)}).catch(()=>{})});
