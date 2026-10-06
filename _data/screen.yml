@@ -209,3 +209,23 @@
   height: 390
   source: "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png"
   source_page: "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)"
+
+- id: "love-death-robots"
+  title: "Love, Death & Robots"
+  title_zh: "爱，死亡和机器人（爱死机）"
+  edition: "2019 · Netflix"
+  image: "love-death-robots.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/vL5BQvXH96cJzmNK5n7QliQxy90.jpg"
+  source_page: "https://www.themoviedb.org/tv/86831-love-death-robots?language=en-US"
+
+- id: "friends"
+  title: "Friends"
+  title_zh: "老友记"
+  edition: "1994–2004"
+  image: "friends.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg"
+  source_page: "https://www.themoviedb.org/tv/1668-friends?language=en-US"

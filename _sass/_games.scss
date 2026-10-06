@@ -346,6 +346,7 @@
 }
 
 .screen-badge-bones,
+.screen-badge-friends,
 .screen-badge-2001-space-odyssey,
 .screen-badge-once-upon-america,
 .screen-badge-world-war-z,
@@ -364,6 +365,12 @@
 
 .screen-badge-walking-dead {
   --poster-focus: 100%;
+}
+
+// Keep all three marks of the anthology's vertical logo inside the medallion.
+.screen-badge-love-death-robots .game-badge-face img {
+  background-color: #050508;
+  object-fit: contain;
 }
 
 @media (max-width: 767px) {
