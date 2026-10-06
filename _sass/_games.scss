@@ -295,6 +295,73 @@
   text-align: center;
 }
 
+// The screen collection shares the same brass medallions as the game wall.
+.screen-wall {
+  margin-top: 3rem;
+  background: radial-gradient(ellipse at 50% 0, #2c2b34, #0f1c2e 65%);
+}
+
+.screen-badge {
+  --poster-focus: 25%;
+
+  .game-badge-face {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center var(--poster-focus);
+      filter: none;
+    }
+
+    &::before {
+      z-index: 1;
+      border-color: #d4bc91;
+      pointer-events: none;
+    }
+  }
+
+  .screen-badge-edition {
+    margin-top: 0.4rem;
+    color: #d4bc91;
+    font-family: inherit;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+}
+
+// Keep faces and the original Godfather wordmark inside the circular frame.
+.screen-badge-interstellar,
+.screen-badge-to-live,
+.screen-badge-red-sorghum,
+.screen-badge-godfather-1,
+.screen-badge-godfather-3,
+.screen-badge-iron-man,
+.screen-badge-terminator,
+.screen-badge-rocky {
+  --poster-focus: 0%;
+}
+
+.screen-badge-bones,
+.screen-badge-once-upon-america,
+.screen-badge-world-war-z,
+.screen-badge-saw {
+  --poster-focus: 50%;
+}
+
+.screen-badge-journey-west,
+.screen-badge-first-blood {
+  --poster-focus: 15%;
+}
+
+.screen-badge-3-body {
+  --poster-focus: 20%;
+}
+
+.screen-badge-walking-dead {
+  --poster-focus: 100%;
+}
+
 @media (max-width: 767px) {
   .game-wall {
     padding: 1.5rem 1rem 1.25rem;

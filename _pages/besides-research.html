@@ -2,7 +2,7 @@
 layout: default
 title: Besides research
 permalink: /besides-research/
-description: A personal badge wall of games I've played, from Black Myth Wukong to Pokémon Ruby, Emerald, and Sapphire.
+description: A personal collection of games I've played and films and television series I've watched, beyond research.
 nav: false
 ---
 
@@ -11,10 +11,10 @@ nav: false
     <a class="game-room-back" href="{{ '/' | relative_url }}"><span aria-hidden="true">&larr;</span> Back to research</a>
     <p class="game-room-eyebrow">Off the clock</p>
     <h1>Besides research<span aria-hidden="true">.</span></h1>
-    <p class="game-room-description">Other worlds. Different adventures. A collection of games I've played.</p>
+    <p class="game-room-description">Games I've played. Films and series I've watched. A few worlds beyond research.</p>
   </header>
 
-  <section class="game-wall" aria-labelledby="game-wall-title">
+  <section id="games" class="game-wall" aria-labelledby="game-wall-title">
     <div class="game-wall-heading">
       <h2 id="game-wall-title">The game wall</h2>
       <p>{{ site.data.games | size }} games played</p>
@@ -34,5 +34,18 @@ nav: false
     </ul>
 
     <p class="game-wall-note">A little collection, with room for the next adventure.</p>
+  </section>
+
+  <section id="screen" class="game-wall screen-wall" aria-labelledby="screen-wall-title">
+    <div class="game-wall-heading">
+      <h2 id="screen-wall-title">Films &amp; television</h2>
+      <p>{{ site.data.screen | size }} screen badges</p>
+    </div>
+
+    <ul class="game-badges">
+      {% for work in site.data.screen %} {% include screen-badge.liquid work=work %} {% endfor %}
+    </ul>
+
+    <p class="game-wall-note">Stories that stay after the credits roll.</p>
   </section>
 </article>

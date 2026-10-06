@@ -1,0 +1,181 @@
+# Films and television watched; series use a representative instalment.
+# Source URLs document the artwork; the page serves only local WebP images.
+- id: "interstellar"
+  title: "Interstellar"
+  title_zh: "星际穿越"
+  edition: "2014"
+  image: "interstellar.webp"
+  width: 220
+  height: 326
+  source: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Interstellar_(film)"
+
+- id: "bones"
+  title: "Bones"
+  title_zh: "识骨寻踪"
+  edition: "2005–2017"
+  image: "bones.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/idoizqe5ahg7YCBnwd8MW9XS7hm.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Bones_(TV_series)"
+
+- id: "to-live"
+  title: "To Live"
+  title_zh: "活着"
+  edition: "1994"
+  image: "to-live.webp"
+  width: 248
+  height: 367
+  source: "https://upload.wikimedia.org/wikipedia/en/e/ef/To_Live_Poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/To_Live_(1994_film)"
+
+- id: "red-sorghum"
+  title: "Red Sorghum"
+  title_zh: "红高粱"
+  edition: "1988"
+  image: "red-sorghum.webp"
+  width: 262
+  height: 380
+  source: "https://upload.wikimedia.org/wikipedia/en/c/ca/Red_Sorghum_movie_poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Red_Sorghum_(film)"
+
+- id: "white-night"
+  title: "Into the White Night"
+  title_zh: "白夜行"
+  edition: "2011 · Japanese film"
+  image: "white-night.webp"
+  width: 400
+  height: 569
+  source: "https://www.gaga.co.jp/wp-content/uploads/2020/02/白夜行_軽-400x569.jpg"
+  source_page: "https://www.gaga.co.jp/intls/into-the-white-night/"
+
+- id: "godfather-1"
+  title: "The Godfather"
+  title_zh: "教父"
+  edition: "1972"
+  image: "godfather-1.webp"
+  width: 220
+  height: 330
+  source: "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg"
+  source_page: "https://en.wikipedia.org/wiki/The_Godfather"
+
+- id: "godfather-2"
+  title: "The Godfather Part II"
+  title_zh: "教父 2"
+  edition: "1974"
+  image: "godfather-2.webp"
+  width: 220
+  height: 331
+  source: "https://upload.wikimedia.org/wikipedia/en/0/03/Godfather_part_ii.jpg"
+  source_page: "https://en.wikipedia.org/wiki/The_Godfather_Part_II"
+
+- id: "godfather-3"
+  title: "The Godfather Part III"
+  title_zh: "教父 3"
+  edition: "1990"
+  image: "godfather-3.webp"
+  width: 220
+  height: 331
+  source: "https://upload.wikimedia.org/wikipedia/en/5/55/GodfatherIII2.jpg"
+  source_page: "https://en.wikipedia.org/wiki/The_Godfather_Part_III"
+
+- id: "once-upon-america"
+  title: "Once Upon a Time in America"
+  title_zh: "美国往事"
+  edition: "1984"
+  image: "once-upon-america.webp"
+  width: 254
+  height: 392
+  source: "https://upload.wikimedia.org/wikipedia/en/c/c2/Once_Upon_a_Time_in_America.png"
+  source_page: "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_America"
+
+- id: "journey-west"
+  title: "Journey to the West"
+  title_zh: "西游记"
+  edition: "1986 · CCTV"
+  image: "journey-west.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/bAl4rX85qVbGeVslvQqFRDHsQ6X.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Journey_to_the_West_(1986_TV_series)"
+
+- id: "iron-man"
+  title: "Iron Man"
+  title_zh: "钢铁侠 1"
+  edition: "2008"
+  image: "iron-man.webp"
+  width: 260
+  height: 384
+  source: "https://upload.wikimedia.org/wikipedia/en/0/02/Iron_Man_%282008_film%29_poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)"
+
+- id: "terminator"
+  title: "Terminator 2: Judgment Day"
+  title_zh: "终结者系列"
+  edition: "1991"
+  image: "terminator.webp"
+  width: 263
+  height: 385
+  source: "https://upload.wikimedia.org/wikipedia/en/5/5e/Terminator_2-Judgment_Day.png"
+  source_page: "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day"
+
+- id: "first-blood"
+  title: "First Blood"
+  title_zh: "第一滴血系列"
+  edition: "1982"
+  image: "first-blood.webp"
+  width: 254
+  height: 392
+  source: "https://upload.wikimedia.org/wikipedia/en/d/d6/First_blood_poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/First_Blood"
+
+- id: "rocky"
+  title: "Rocky"
+  title_zh: "洛奇系列"
+  edition: "1976"
+  image: "rocky.webp"
+  width: 260
+  height: 383
+  source: "https://upload.wikimedia.org/wikipedia/en/1/18/Rocky_poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Rocky"
+
+- id: "world-war-z"
+  title: "World War Z"
+  title_zh: "僵尸世界大战"
+  edition: "2013"
+  image: "world-war-z.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/aCnVdvExw6UWSeQfr0tUH3jr4qG.jpg"
+  source_page: "https://en.wikipedia.org/wiki/World_War_Z_(film)"
+
+- id: "3-body"
+  title: "3 Body Problem"
+  title_zh: "三体"
+  edition: "2024 · Netflix"
+  image: "3-body.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/ykZ7hlShkdRQaL2aiieXdEMmrLb.jpg"
+  source_page: "https://en.wikipedia.org/wiki/3_Body_Problem_(TV_series)"
+
+- id: "saw"
+  title: "Saw"
+  title_zh: "电锯惊魂系列"
+  edition: "2004"
+  image: "saw.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/rLNSOudrayDBo1uqXjrhxcjODIC.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Saw_(film)"
+
+- id: "walking-dead"
+  title: "The Walking Dead"
+  title_zh: "行尸走肉"
+  edition: "2010 · AMC series"
+  image: "walking-dead.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/wAXeO9Qyne3C6LEibz3zOQc2Y70.jpg"
+  source_page: "https://www.themoviedb.org/tv/1402-the-walking-dead/season/1?language=en-US"

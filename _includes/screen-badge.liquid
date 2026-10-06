@@ -1,0 +1,18 @@
+<li class="game-badge screen-badge screen-badge-{{ include.work.id }}">
+  <div class="game-badge-medallion" aria-hidden="true">
+    <div class="game-badge-face">
+      <img
+        src="{{ include.work.image | prepend: '/assets/img/screen/' | relative_url }}"
+        alt=""
+        width="{{ include.work.width }}"
+        height="{{ include.work.height }}"
+        loading="lazy"
+        decoding="async"
+      >
+    </div>
+    <span class="game-badge-pin"></span>
+  </div>
+  <h3>{{ include.work.title }}</h3>
+  <p lang="zh-Hans">{{ include.work.title_zh }}</p>
+  <p class="screen-badge-edition">{{ include.work.edition }}</p>
+</li>
