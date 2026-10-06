@@ -97,6 +97,14 @@
   source: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png"
   collection: "hoenn"
 
+- id: "space-marine-2"
+  title: "Warhammer 40,000: Space Marine 2"
+  title_zh: "战锤40,000：星际战士 2"
+  image: "space-marine-2.webp"
+  width: 480
+  height: 155
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2183900/logo.png"
+
 - id: "emerald"
   title: "Pokémon Emerald"
   title_zh: "宝可梦 绿宝石"

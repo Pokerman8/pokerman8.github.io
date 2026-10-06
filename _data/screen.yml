@@ -179,3 +179,33 @@
   height: 640
   source: "https://image.tmdb.org/t/p/w500/wAXeO9Qyne3C6LEibz3zOQc2Y70.jpg"
   source_page: "https://www.themoviedb.org/tv/1402-the-walking-dead/season/1?language=en-US"
+
+- id: "drawing-sword"
+  title: "Drawing Sword"
+  title_zh: "亮剑"
+  edition: "2005 · TV series"
+  image: "drawing-sword.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/kJLn4BFfii9UlXXsFsbZ0uPXcOG.jpg"
+  source_page: "https://www.themoviedb.org/tv/71496?language=en-US"
+
+- id: "three-kingdoms"
+  title: "Romance of the Three Kingdoms"
+  title_zh: "三国演义"
+  edition: "1994 · CCTV"
+  image: "three-kingdoms.webp"
+  width: 250
+  height: 350
+  source: "https://upload.wikimedia.org/wikipedia/en/3/39/Romance_of_the_Three_Kingdoms_%28TV_series%29.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Romance_of_the_Three_Kingdoms_(TV_series)"
+
+- id: "2001-space-odyssey"
+  title: "2001: A Space Odyssey"
+  title_zh: "2001：太空漫游"
+  edition: "1968"
+  image: "2001-space-odyssey.webp"
+  width: 261
+  height: 390
+  source: "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png"
+  source_page: "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)"
