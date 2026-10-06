@@ -333,6 +333,7 @@
 
 // Keep faces and the original Godfather wordmark inside the circular frame.
 .screen-badge-interstellar,
+.screen-badge-in-the-mood-for-love,
 .screen-badge-drawing-sword,
 .screen-badge-three-kingdoms,
 .screen-badge-to-live,
@@ -363,7 +364,8 @@
   --poster-focus: 20%;
 }
 
-.screen-badge-walking-dead {
+.screen-badge-walking-dead,
+.screen-badge-farewell-my-concubine {
   --poster-focus: 100%;
 }
 

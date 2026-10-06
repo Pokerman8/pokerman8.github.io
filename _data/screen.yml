@@ -229,3 +229,23 @@
   height: 640
   source: "https://image.tmdb.org/t/p/w500/2koX1xLkpTQM4IZebYvKysFW1Nh.jpg"
   source_page: "https://www.themoviedb.org/tv/1668-friends?language=en-US"
+
+- id: "farewell-my-concubine"
+  title: "Farewell My Concubine"
+  title_zh: "霸王别姬"
+  edition: "1993"
+  image: "farewell-my-concubine.webp"
+  width: 250
+  height: 376
+  source: "https://upload.wikimedia.org/wikipedia/en/c/c5/Farewell_My_Concubine_poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Farewell_My_Concubine_(film)"
+
+- id: "in-the-mood-for-love"
+  title: "In the Mood for Love"
+  title_zh: "花样年华"
+  edition: "2000"
+  image: "in-the-mood-for-love.webp"
+  width: 265
+  height: 376
+  source: "https://upload.wikimedia.org/wikipedia/en/4/45/In_the_Mood_for_Love_movie.jpg"
+  source_page: "https://en.wikipedia.org/wiki/In_the_Mood_for_Love"
