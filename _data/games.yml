@@ -1,0 +1,116 @@
+# Logos and representative artwork for games I have played.
+# Keep source URLs here so each locally hosted image can be traced.
+- id: "wukong"
+  title: "Black Myth: Wukong"
+  title_zh: "黑神话：悟空"
+  image: "wukong.webp"
+  width: 480
+  height: 130
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2358720/logo.png"
+
+- id: "god-of-war"
+  title: "God of War"
+  title_zh: "战神 4"
+  image: "god-of-war.webp"
+  width: 480
+  height: 104
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/logo.png"
+
+- id: "dying-light"
+  title: "Dying Light"
+  title_zh: "消逝的光芒"
+  image: "dying-light.webp"
+  width: 480
+  height: 141
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/239140/logo.png"
+
+- id: "left-4-dead"
+  title: "Left 4 Dead"
+  title_zh: "求生之路"
+  image: "left-4-dead.webp"
+  width: 480
+  height: 147
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/500/logo.png"
+
+- id: "last-of-us-1"
+  title: "The Last of Us Part I"
+  title_zh: "最后生还者 第一部"
+  image: "last-of-us-1.webp"
+  width: 480
+  height: 167
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1888930/logo.png"
+
+- id: "last-of-us-2"
+  title: "The Last of Us Part II"
+  title_zh: "最后生还者 第二部"
+  image: "last-of-us-2.webp"
+  width: 466
+  height: 177
+  source: "https://gmedia.playstation.com/is/image/SIEPDC/the-last-of-us-part-2-stacked-black-logo-01-ps4-en-04aug21?fmt=png-alpha&wid=480"
+
+- id: "deadpool"
+  title: "Deadpool"
+  title_zh: "死侍（2013）"
+  image: "deadpool.svg"
+  width: 200
+  height: 200
+  source: "Vector rendition of Deadpool’s signature mask emblem."
+
+- id: "stellar-blade"
+  title: "Stellar Blade"
+  title_zh: "剑星"
+  image: "stellar-blade.webp"
+  width: 480
+  height: 214
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3489700/logo.png"
+
+- id: "ac-origins"
+  title: "Assassin’s Creed Origins"
+  title_zh: "刺客信条：起源"
+  image: "ac-origins.webp"
+  width: 480
+  height: 170
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/logo.png"
+
+- id: "ac-odyssey"
+  title: "Assassin’s Creed Odyssey"
+  title_zh: "刺客信条：奥德赛"
+  image: "ac-odyssey.webp"
+  width: 480
+  height: 155
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/logo.png"
+
+- id: "tears-of-the-kingdom"
+  title: "The Legend of Zelda: Tears of the Kingdom"
+  title_zh: "塞尔达传说：王国之泪"
+  image: "tears-of-the-kingdom.webp"
+  width: 480
+  height: 270
+  source: "https://www.nintendo.com/jp/zelda/totk/assets/img/common/logo_totk.webp"
+
+- id: "ruby"
+  title: "Pokémon Ruby"
+  title_zh: "宝可梦 红宝石"
+  image: "ruby.webp"
+  width: 431
+  height: 295
+  source: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png"
+  collection: "hoenn"
+
+- id: "emerald"
+  title: "Pokémon Emerald"
+  title_zh: "宝可梦 绿宝石"
+  image: "emerald.webp"
+  width: 431
+  height: 391
+  source: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png"
+  collection: "hoenn"
+
+- id: "sapphire"
+  title: "Pokémon Sapphire"
+  title_zh: "宝可梦 蓝宝石"
+  image: "sapphire.webp"
+  width: 431
+  height: 197
+  source: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png"
+  collection: "hoenn"

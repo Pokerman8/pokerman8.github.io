@@ -1,0 +1,38 @@
+---
+layout: default
+title: Besides research
+permalink: /besides-research/
+description: A personal badge wall of games I've played, from Black Myth Wukong to Pokémon Ruby, Emerald, and Sapphire.
+nav: false
+---
+
+<article class="game-room">
+  <header class="game-room-intro">
+    <a class="game-room-back" href="{{ '/' | relative_url }}"><span aria-hidden="true">&larr;</span> Back to research</a>
+    <p class="game-room-eyebrow">Off the clock</p>
+    <h1>Besides research<span aria-hidden="true">.</span></h1>
+    <p class="game-room-description">Other worlds. Different adventures. A collection of games I've played.</p>
+  </header>
+
+  <section class="game-wall" aria-labelledby="game-wall-title">
+    <div class="game-wall-heading">
+      <h2 id="game-wall-title">The game wall</h2>
+      <p>{{ site.data.games | size }} games played</p>
+    </div>
+
+    <ul class="game-badges">
+      {% for game in site.data.games %} {% unless game.collection == 'hoenn' %} {% include game-badge.liquid game=game %} {% endunless %} {% endfor %}
+    </ul>
+
+    <div class="game-wall-chapter">
+      <span aria-hidden="true"></span>
+      <h3>Back to Hoenn</h3>
+      <span aria-hidden="true"></span>
+    </div>
+    <ul class="game-badges game-badges-hoenn" aria-label="Pokémon games set in Hoenn">
+      {% for game in site.data.games %} {% if game.collection == 'hoenn' %} {% include game-badge.liquid game=game %} {% endif %} {% endfor %}
+    </ul>
+
+    <p class="game-wall-note">A little collection, with room for the next adventure.</p>
+  </section>
+</article>

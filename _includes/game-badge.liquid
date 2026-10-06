@@ -1,0 +1,17 @@
+<li class="game-badge game-badge-{{ include.game.id }}">
+  <div class="game-badge-medallion" aria-hidden="true">
+    <div class="game-badge-face">
+      <img
+        src="{{ include.game.image | prepend: '/assets/img/games/' | relative_url }}"
+        alt=""
+        width="{{ include.game.width }}"
+        height="{{ include.game.height }}"
+        loading="lazy"
+        decoding="async"
+      >
+    </div>
+    <span class="game-badge-pin"></span>
+  </div>
+  <h3>{{ include.game.title }}</h3>
+  <p lang="zh-Hans">{{ include.game.title_zh }}</p>
+</li>

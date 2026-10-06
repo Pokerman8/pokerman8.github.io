@@ -16,7 +16,14 @@ layout: default
           %}
         </div>
       {% endif %}
-      <div class="section-body">{{ content }}</div>
+      <div class="section-body">
+        {{ content }}
+        <a class="besides-research-link" href="{{ '/besides-research/' | relative_url }}">
+          <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+          Besides research
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </section>
 
     <!-- News -->
