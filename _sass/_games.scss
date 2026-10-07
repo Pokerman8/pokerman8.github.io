@@ -226,12 +226,15 @@
 }
 
 .game-badge-god-of-war,
+.game-badge-red-dead-redemption-2,
+.game-badge-witcher-3,
 .game-badge-deadpool,
 .game-badge-ruby {
   --badge-tint: #4a2528;
 }
 
 .game-badge-dying-light,
+.game-badge-cyberpunk-2077,
 .game-badge-ac-odyssey {
   --badge-tint: #433521;
 }
@@ -246,6 +249,11 @@
 .game-badge-space-marine-2,
 .game-badge-sapphire {
   --badge-tint: #203b54;
+}
+
+// Brighten the dark lettering while keeping the red claw saturated.
+.game-badge-witcher-3 img {
+  filter: saturate(2) brightness(5) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
 }
 
 // These publishers supply black wordmarks; reverse them for the navy face.

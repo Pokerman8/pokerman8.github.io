@@ -122,3 +122,27 @@
   height: 197
   source: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png"
   collection: "hoenn"
+
+- id: "red-dead-redemption-2"
+  title: "Red Dead Redemption 2"
+  title_zh: "荒野大镖客 2"
+  image: "red-dead-redemption-2.webp"
+  width: 480
+  height: 177
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/logo.png"
+
+- id: "witcher-3"
+  title: "The Witcher 3: Wild Hunt"
+  title_zh: "巫师 3：狂猎"
+  image: "witcher-3.webp"
+  width: 480
+  height: 240
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/logo.png"
+
+- id: "cyberpunk-2077"
+  title: "Cyberpunk 2077"
+  title_zh: "赛博朋克 2077"
+  image: "cyberpunk-2077.webp"
+  width: 480
+  height: 161
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/logo.png"
