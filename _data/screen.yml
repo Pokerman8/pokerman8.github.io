@@ -269,3 +269,63 @@
   height: 368
   source: "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg"
   source_page: "https://en.wikipedia.org/wiki/Saving_Private_Ryan"
+
+- id: "v-for-vendetta"
+  title: "V for Vendetta"
+  title_zh: "V 字仇杀队"
+  edition: "2005"
+  image: "v-for-vendetta.webp"
+  width: 220
+  height: 325
+  source: "https://upload.wikimedia.org/wikipedia/en/9/9f/Vforvendettamov.jpg"
+  source_page: "https://en.wikipedia.org/wiki/V_for_Vendetta_(film)"
+
+- id: "in-the-name-of-the-people"
+  title: "In the Name of the People"
+  title_zh: "人民的名义"
+  edition: "2017"
+  image: "in-the-name-of-the-people.webp"
+  width: 247
+  height: 402
+  source: "https://upload.wikimedia.org/wikipedia/en/f/fb/In_the_name_of_people.jpg"
+  source_page: "https://en.wikipedia.org/wiki/In_the_Name_of_the_People_(TV_series)"
+
+- id: "evangelion"
+  title: "Neon Genesis Evangelion"
+  title_zh: "新世纪福音战士"
+  edition: "1995–1996"
+  image: "evangelion.webp"
+  width: 311
+  height: 114
+  source: "https://upload.wikimedia.org/wikipedia/en/7/72/Evangelion_retouched.png"
+  source_page: "https://en.wikipedia.org/wiki/Neon_Genesis_Evangelion"
+
+- id: "hotel-rwanda"
+  title: "Hotel Rwanda"
+  title_zh: "卢旺达饭店"
+  edition: "2004"
+  image: "hotel-rwanda.webp"
+  width: 220
+  height: 325
+  source: "https://upload.wikimedia.org/wikipedia/en/d/d5/Hotel_Rwanda_movie.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Hotel_Rwanda"
+
+- id: "men-behind-the-sun"
+  title: "Men Behind the Sun"
+  title_zh: "黑太阳 731"
+  edition: "1988"
+  image: "men-behind-the-sun.webp"
+  width: 249
+  height: 52
+  source: "https://upload.wikimedia.org/wikipedia/en/1/16/Men_Behind_the_Sun_Poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Men_Behind_the_Sun"
+
+- id: "loong-restaurant"
+  title: "Once Upon a Time in the Middle East"
+  title_zh: "欢迎来龙餐馆"
+  edition: "2026"
+  image: "loong-restaurant.webp"
+  width: 433
+  height: 640
+  source: "https://wellgousa.com/sites/default/files/styles/i_1920x/public/2026-09/OUATITME-812x1200.jpg.webp?itok=DXMk97ve"
+  source_page: "https://wellgousa.com/films/once-upon-time-middle-east"
