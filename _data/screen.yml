@@ -329,3 +329,23 @@
   height: 640
   source: "https://wellgousa.com/sites/default/files/styles/i_1920x/public/2026-09/OUATITME-812x1200.jpg.webp?itok=DXMk97ve"
   source_page: "https://wellgousa.com/films/once-upon-time-middle-east"
+
+- id: "leon-the-professional"
+  title: "Léon: The Professional"
+  title_zh: "这个杀手不太冷"
+  edition: "1994"
+  image: "leon-the-professional.webp"
+  width: 248
+  height: 341
+  source: "https://upload.wikimedia.org/wikipedia/en/0/03/Leon-poster.jpg"
+  source_page: "https://en.wikipedia.org/wiki/L%C3%A9on:_The_Professional"
+
+- id: "pursuit-of-happyness"
+  title: "The Pursuit of Happyness"
+  title_zh: "当幸福来敲门"
+  edition: "2006"
+  image: "pursuit-of-happyness.webp"
+  width: 259
+  height: 384
+  source: "https://upload.wikimedia.org/wikipedia/en/8/81/Poster-pursuithappyness.jpg"
+  source_page: "https://en.wikipedia.org/wiki/The_Pursuit_of_Happyness"
