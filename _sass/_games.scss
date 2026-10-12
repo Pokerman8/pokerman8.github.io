@@ -379,6 +379,7 @@
 }
 
 .screen-badge-walking-dead,
+.screen-badge-chernobyl,
 .screen-badge-in-the-name-of-the-people,
 .screen-badge-farewell-my-concubine {
   --poster-focus: 100%;
@@ -399,6 +400,14 @@
   img {
     width: 88%;
   }
+}
+
+// Saul's signature and scales are a wordmark, so keep the entire logo visible.
+.screen-badge-better-call-saul .game-badge-face img {
+  width: 88%;
+  height: 80%;
+  object-fit: contain;
+  object-position: center;
 }
 
 @media (max-width: 767px) {

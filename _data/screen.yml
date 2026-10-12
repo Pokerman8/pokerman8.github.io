@@ -349,3 +349,33 @@
   height: 384
   source: "https://upload.wikimedia.org/wikipedia/en/8/81/Poster-pursuithappyness.jpg"
   source_page: "https://en.wikipedia.org/wiki/The_Pursuit_of_Happyness"
+
+- id: "chernobyl"
+  title: "Chernobyl"
+  title_zh: "切尔诺贝利"
+  edition: "2019 · HBO miniseries"
+  image: "chernobyl.webp"
+  width: 250
+  height: 370
+  source: "https://upload.wikimedia.org/wikipedia/en/a/a7/Chernobyl_2019_Miniseries.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Chernobyl_(miniseries)"
+
+- id: "better-call-saul"
+  title: "Better Call Saul"
+  title_zh: "风骚律师"
+  edition: "2015–2022"
+  image: "better-call-saul.webp"
+  width: 480
+  height: 233
+  source: "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8a/Better_Call_Saul_logo.svg/1280px-Better_Call_Saul_logo.svg.png"
+  source_page: "https://en.wikipedia.org/wiki/Better_Call_Saul"
+
+- id: "shameless-us"
+  title: "Shameless"
+  title_zh: "无耻之徒（美版）"
+  edition: "2011–2021"
+  image: "shameless-us.webp"
+  width: 427
+  height: 640
+  source: "https://image.tmdb.org/t/p/w500/Yi3WVT6hOkPahOwwvmLmif1jhs.jpg"
+  source_page: "https://www.themoviedb.org/tv/34307-shameless?language=en-US"
