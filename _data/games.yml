@@ -146,3 +146,19 @@
   width: 480
   height: 161
   source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/logo.png"
+
+- id: "uncharted-legacy-of-thieves"
+  title: "Uncharted: Legacy of Thieves Collection"
+  title_zh: "神秘海域：盗贼遗产合集"
+  image: "uncharted.webp"
+  width: 360
+  height: 86
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1659420/logo.png"
+
+- id: "tomb-raider"
+  title: "Tomb Raider (2013)"
+  title_zh: "古墓丽影（2013）"
+  image: "tomb-raider.webp"
+  width: 360
+  height: 38
+  source: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/203160/logo.png"
