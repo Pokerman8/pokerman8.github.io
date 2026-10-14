@@ -23,7 +23,7 @@ plate:
     #   url: /assets/pdf/cv.pdf
 
 profile:
-  image: prof_pic.jpg
+  image: prof_pic_2026.jpg
   alt: Portrait of Ji-Ping Jin
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
