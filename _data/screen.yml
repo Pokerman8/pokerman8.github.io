@@ -379,3 +379,13 @@
   height: 640
   source: "https://image.tmdb.org/t/p/w500/Yi3WVT6hOkPahOwwvmLmif1jhs.jpg"
   source_page: "https://www.themoviedb.org/tv/34307-shameless?language=en-US"
+
+- id: "real-steel"
+  title: "Real Steel"
+  title_zh: "铁甲钢拳"
+  edition: "2011"
+  image: "real-steel.webp"
+  width: 427
+  height: 640
+  source: "https://amblin.com/wp-content/uploads/2019/08/realsteel_2011_poster_1.jpg"
+  source_page: "https://amblin.com/movie/real-steel/"
