@@ -389,3 +389,13 @@
   height: 640
   source: "https://amblin.com/wp-content/uploads/2019/08/realsteel_2011_poster_1.jpg"
   source_page: "https://amblin.com/movie/real-steel/"
+
+- id: "lord-of-war"
+  title: "Lord of War"
+  title_zh: "战争之王"
+  edition: "2005"
+  image: "lord-of-war.webp"
+  width: 258
+  height: 385
+  source: "https://upload.wikimedia.org/wikipedia/en/9/92/Lordofwar.jpg"
+  source_page: "https://en.wikipedia.org/wiki/Lord_of_War"
